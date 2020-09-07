@@ -18,9 +18,9 @@ pipeline {
                 sh 'scp testrep/index.html bobby@bobbyweb:/var/www/bobby.com/html/index.html'
             }
         }
-        stage("Second step") {
+        stage("Restart apache") {
             steps {
-                sh 'ssh bobby@bobbyweb \'uptime\''
+                sh 'ssh bobby@bobbyweb \'sudo systemctl restart apache2.service\''
             }
         }
     }
