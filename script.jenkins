@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage("Get and copy latest web page local") {
             steps {
-                sh 'rm -r -y testrep
+                sh 'rm -r -y testrep'
                 sh 'git clone git@github.com:bobbylv75/testrep.git'
                 sh 'scp testrep/index.html bobby@bobbyweb:/var/www/bobby.com/html/index.html'
             }
