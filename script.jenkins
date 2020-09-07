@@ -11,9 +11,9 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("First step") {
+        stage("Get latest web page") {
             steps {
-                sh 'ssh bobby@bobbyweb \'hostname\''
+                sh 'git clone '
             }
         }
         stage("Second step") {
