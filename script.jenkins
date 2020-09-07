@@ -11,7 +11,7 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("Get and copy latest web page") {
+        stage("Get and copy latest web page local") {
             steps {
                 sh 'git clone git@github.com:bobbylv75/testrep.git'
                 sh 'rm /var/www/bobby.com/html/index.html'
