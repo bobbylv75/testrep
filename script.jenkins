@@ -20,7 +20,7 @@ pipeline {
         }
         stage("Restart apache") {
             steps {
-                sh 'ssh bobby@bobbyweb apachectl restart'
+                sh 'ssh bobby@bobbyweb sudo apachectl restart'
             }
         }
     }
