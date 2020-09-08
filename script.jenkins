@@ -1,4 +1,4 @@
-o#!groovy
+#!groovy
 // Check bobbyweb properties
 properties([disableConcurrentBuilds()])
 
